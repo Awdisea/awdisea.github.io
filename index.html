@@ -1,51 +1,106 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Hind+Siliguri:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
+    <title>Background Image with Centered Div</title>
     <style>
-        body {
-            background-image: url('images/movie-set-1.jpeg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            margin: 0px;
-            background-color: black;
-            font-family: sans-serif;
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .centeredDiv {
+        /* Full-screen background image */
+        body {
+            background-image: url('images/movie-set-1.jpeg');
+            /* Replace 'your-image.jpg' with your image URL */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        p {
+            color: #d4d1d1;
+            text-align: left;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Menu styling */
+        .menu {
             width: 100%;
-            height: 100vh;
-            background-color: #f0f0f0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            /* Semi-transparent background */
+            text-align: center;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+
+        .titleContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Centered div with padding */
+        .centered-div {
+            padding: 40px 100px 40px 100px;
+            background: rgb(0 0 0 / 66%);
+            /* Semi-transparent background */
+            margin-top: 20px;
+            width: calc(100% - 200px);
+            /* Adjusting width to consider the 100px padding */
+            max-width: 800px;
+            /* Set a maximum width for larger screens */
+            text-align: center;
+            color: #333;
+            border-radius: 20px;
+            justify-items: center;
         }
     </style>
 </head>
 
-<html>
-
 <body>
-    <div style="block;">
-        <div style="padding: 20px;">
-            <img src="images/awdisea-icon-1.png" style="width: 100px;" />
-        </div>
-        <div class="centeredDiv">
-            <div style="width: 500px; background-color: rgba(0, 0, 0, 0.303); border-radius: 10px;">
-                <div>YouTube Video Performance Pedictor</div>
-                <div>Predict how many views your video will get before creating it.</div>
+
+    <!-- Menu -->
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- Centered Div -->
+    <div class="centered-div">
+        <div class="titleContainer">
+            <img src="images/awdisea-icon-1.png" style="width: 80px; margin-right: 20px;" </div>
+            <div>
+                <div style="color: #ffffff; padding-bottom: 5px;">Awdisea's</div>
+                <h1 style="font-size: 1.5rem; color: #ffffff">YouTube Video Performance Predictor</h1>
+                <p style="color: #7de6fb; font-size: 1rem; text-align: center;">Predict how many views your video will get before creating it.</p>
             </div>
         </div>
-    </div>
-    <!--     <div style="padding: 20px;">
-        <a style="font-size: 16pt; color: #f5d3d3" href="cats.html">My Cats</a>
-    </div> -->
+        <p>Awdisea is an AI powered tool that can predict how many views a video will most likely get within a week even before the video is created. At the very minimum, it
+            can predict the number of views solely on the video’s title and thumbnail, giving the least accurate prediction, or it can achieve a much higher accuracy when
+            additional data is used such as the number of subscribers, total channel views, number of videos uploaded and many other parameters.</p>
+        <p>Awdisea provides 4 different levels of accuracy prediction with the lowest level being the least accurate and the top level being the most accurate. Each level depends
+            on more data.</p>
+        <p>Publishing a video and hoping it will be successful is just rolling the dice. Use Awdisea to increase your chances of creating a successful video.</p>
 
 </body>
 
