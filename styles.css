@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    background-image: url('images/movie-set-1.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #96ff62 !important;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+p {
+    color: #d4d1d1;
+    text-align: left;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+a {
+    font-size: 1.2rem;
+    color: #a5d5de;
+}
+
+.title2 {
+    color: #7cf2fa;
+    font-size: 1.4rem;
+}
+
+.titleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.scrollable-div {
+    padding: 40px 100px 40px 100px;
+    background: rgb(0 0 0 / 66%);
+    margin-top: 20px;
+    width: calc(100% - 200px);
+    height: calc(100vh - 100px);
+    max-width: 900px;
+    text-align: center;
+    color: #333;
+    border-radius: 20px;
+    justify-items: center;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.scrollable-div::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-div::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+}
+
+.scrollable-div::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollable-div::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable-div:hover::-webkit-scrollbar {
+    display: block;
+}
+
+.menu {
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto 60px;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 40px;
+}
+
+.cell {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    background-color: #a5d5de;
+    font-weight: bold;
+}
+
+.middle-text {
+    text-align: center;
+    color: #a5d5de;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 7px;
+    background-color: #5e96a0;
+    color: white;
+}
+
+.btnSendEmail {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 7px;
+    background-color: #5e96a0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Dialog content box */
+.dialog-content {
+    background: #fff;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#emailInput {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Ensures width stays inside padding area */
+}
+
+#submitBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+#submitBtn:hover {
+    background-color: #45a049;
+}

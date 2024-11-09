@@ -5,142 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Predict how many views your video will get before creating it.">
-    <title>YouTube Video Performance Predictor</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-image: url('images/movie-set-1.jpeg');
-            background-size: cover;
-            background-position: center;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            color: #96ff62 !important;
-            overflow: hidden;
-            padding: 20px 0;
-        }
-
-        p {
-            color: #d4d1d1;
-            text-align: left;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        a {
-            font-size: 1.2rem;
-            color: #a5d5de;
-        }
-
-        /* Menu styling */
-        .menu {
-            width: 100%;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            text-align: center;
-        }
-
-        .menu a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-        }
-
-        .titleContainer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        /* Centered div with padding */
-        .scrollable-div {
-            padding: 40px 100px 40px 100px;
-            background: rgb(0 0 0 / 66%);
-            margin-top: 20px;
-            width: calc(100% - 200px);
-            height: calc(100vh - 100px);
-            max-width: 900px;
-            text-align: center;
-            color: #333;
-            border-radius: 20px;
-            justify-items: center;
-
-            overflow-y: auto;
-            scrollbar-width: thin;
-            scrollbar-color: transparent transparent;
-        }
-
-        .table {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto auto 60px;
-            gap: 15px;
-            width: 100%;
-            max-width: 600px;
-            margin-top: 40px;
-        }
-
-        .cell {
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .title {
-            background-color: #a5d5de;
-            font-weight: bold;
-        }
-
-        .middle-text {
-            text-align: center;
-            color: #a5d5de;
-        }
-
-        .button-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .button {
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 7px;
-            background-color: #5e96a0;
-            color: white;
-        }
-
-        .scrollable-div::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .scrollable-div::-webkit-scrollbar-thumb {
-            background-color: rgba(255, 255, 255, 0.5);
-            border-radius: 4px;
-        }
-
-        .scrollable-div::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        .scrollable-div::-webkit-scrollbar {
-            display: none;
-        }
-
-        .scrollable-div:hover::-webkit-scrollbar {
-            display: block;
-        }
-    </style>
+    <title>Predict YouTube video views in advance</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -148,30 +14,31 @@
     <div style=" width: 100%;">
         <img src="images/youtube-logo.png" style="width: 60px; float: left; margin: 10px; opacity: 0.7;" />
         <div class="menu">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Support</a>
+            <a href="index.html" target="_parent">Home</a>
+            <a href="about.html" target="_parent">About</a>
+            <a href="https://github.com/Awdisea/awdisea.github.io/discussions/1" target="_blank">Support</a>
             <a href="#">Sign In</a>
         </div>
     </div>
 
-
-    <div class="scrollable-div">
+    <div class=" scrollable-div">
         <div class="titleContainer">
-            <img src="images/awdisea-icon-4-rounded.png" style="width: 130px; margin-right: 20px; position: relative; left: -60px" </div>
+            <img src="images/awdisea-icon-4-rounded.png" style="width: 130px; margin-right: 20px;" </div>
             <div>
                 <div style="color: #ffffff; padding-bottom: 5px;">Awdisea's</div>
-                <h1 style="font-size: 1.5rem; color: #fad77c">YouTube Video Performance Predictor</h1>
+                <h1 style="font-size: 1.4rem; color: #fad77c">YouTube Video Performance Predictor</h1>
                 <p style="color: #7de6fb; font-size: 1rem; text-align: center;">Predict how many views your video will get before creating it.</p>
             </div>
         </div>
         <p>Awdisea is an AI powered tool that can predict how many views a video will most likely get within a week even before the video is created. At the very minimum, it
             can predict the number of views solely on the video’s title and thumbnail, giving the least accurate prediction, or it can achieve a much higher accuracy when
             additional data is used such as the number of subscribers, total channel views, number of videos uploaded and many other parameters.</p>
-        <p>Awdisea provides 3 different levels of accuracy prediction with the lowest level being the least accurate and the top level being the most accurate. Each level depends
+        <p>Awdisea provides 3 different levels of accuracy prediction with the lowest level being the least accurate and the top level being the most accurate. Each level
+            depends
             on more data that the AI model gets trained with.</p>
         <p>Publishing a video and hoping it will be successful is just rolling the dice. Use Awdisea to increase your chances of creating a successful video.</p>
-        <p>Before you use this tool, it is important that you understand how much of the YouTube algorithm actually works. You will be better prepared to handle the results of this
+        <p>Before you use this tool, it is important that you understand how much of the YouTube algorithm actually works. You will be better prepared to handle the results of
+            this
             tool, make adjustments to your thumbnail, title and other parameters that you are in control of. <a href="https://google.com">Click here</a> to read about how the
             YouTube algorithm works and how Awdisea's AI is able to improve your chances of having a successful video.</p>
 
@@ -191,15 +58,77 @@
             </div>
 
             <div class="cell button-container">
-                <button class="button">Try Level 1</button>
+                <button class="btnSendEmail">Try Level 1</button>
             </div>
             <div class="cell button-container">
-                <button class="button">Try Level 2</button>
+                <button class="btnSendEmail">Try Level 2</button>
             </div>
             <div class="cell button-container">
-                <button class="button">Try Level 3</button>
+                <button class="btnSendEmail">Try Level 3</button>
             </div>
         </div>
+
+        <!-- The popup dialog -->
+        <div id="dialog" class="dialog">
+            <div class="dialog-content">
+                <!-- Close button (X) -->
+                <span class="close-btn" id="closeDialogBtn">&times;</span>
+                <p style="color: #808080; font-size: 1rem;">This feature is still under development. If you provide your e-mail address, we'll notify you when the beta is
+                    available.</p>
+                <!-- Email input field -->
+                <input type="email" id="emailInput" placeholder="Enter your email" required>
+                <!-- Submit button -->
+                <button id="submitBtn">Submit</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+
+        <script>
+            // Selecting elements
+            const btnSendEmail = document.querySelectorAll('.btnSendEmail');
+            const closeDialogBtn = document.getElementById('closeDialogBtn');
+            const dialog = document.getElementById('dialog');
+            const submitBtn = document.getElementById('submitBtn');
+            const emailInput = document.getElementById('emailInput');
+
+            // Function to open the dialog
+            btnSendEmail.forEach(button => {
+                button.addEventListener('click', () => {
+                    dialog.style.display = 'flex';
+                });
+            });
+
+            // Function to close the dialog
+            closeDialogBtn.addEventListener('click', () => {
+                dialog.style.display = 'none';
+            });
+
+            // Function to submit email (placeholder for API call)
+            submitBtn.addEventListener('click', () => {
+                const email = emailInput.value;
+
+                if (email) {
+                    console.log('Email submitted:', email);
+                    // Placeholder for API call
+                    // fetch('https://api.example.com/submit-email', {
+                    //     method: 'POST',
+                    //     headers: {
+                    //         'Content-Type': 'application/json',
+                    //     },
+                    //     body: JSON.stringify({ email }),
+                    // }).then(response => {
+                    //     console.log('Response:', response);
+                    // });
+
+                    alert('Email submitted successfully!');
+                    dialog.style.display = 'none';
+                    emailInput.value = ''; // Clear input field
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+        </script>
 </body>
 
 </html>
