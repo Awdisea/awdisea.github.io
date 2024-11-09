@@ -7,17 +7,14 @@
     <meta name="description" content="Predict how many views your video will get before creating it.">
     <title>YouTube Video Performance Predictor</title>
     <style>
-        /* Basic reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Full-screen background image */
         body {
             background-image: url('images/movie-set-1.jpeg');
-            /* Replace 'your-image.jpg' with your image URL */
             background-size: cover;
             background-position: center;
             font-family: Arial, sans-serif;
@@ -25,7 +22,9 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            color: #fff;
+            color: #96ff62 !important;
+            overflow: hidden;
+            padding: 20px 0;
         }
 
         p {
@@ -35,12 +34,16 @@
             margin-bottom: 20px;
         }
 
+        a {
+            font-size: 1.2rem;
+            color: #a5d5de;
+        }
+
         /* Menu styling */
         .menu {
             width: 100%;
             padding: 20px;
             background: rgba(0, 0, 0, 0.7);
-            /* Semi-transparent background */
             text-align: center;
         }
 
@@ -59,54 +62,144 @@
         }
 
         /* Centered div with padding */
-        .centered-div {
+        .scrollable-div {
             padding: 40px 100px 40px 100px;
             background: rgb(0 0 0 / 66%);
-            /* Semi-transparent background */
             margin-top: 20px;
             width: calc(100% - 200px);
-            /* Adjusting width to consider the 100px padding */
+            height: calc(100vh - 100px);
             max-width: 900px;
-            /* Set a maximum width for larger screens */
             text-align: center;
             color: #333;
             border-radius: 20px;
             justify-items: center;
+
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: transparent transparent;
+        }
+
+        .table {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto 60px;
+            gap: 15px;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 40px;
+        }
+
+        .cell {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            background-color: #a5d5de;
+            font-weight: bold;
+        }
+
+        .middle-text {
+            text-align: center;
+            color: #a5d5de;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 7px;
+            background-color: #5e96a0;
+            color: white;
+        }
+
+        .scrollable-div::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .scrollable-div::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 4px;
+        }
+
+        .scrollable-div::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .scrollable-div::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollable-div:hover::-webkit-scrollbar {
+            display: block;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Menu -->
-     <div style=" width: 100%;">
+    <div style=" width: 100%;">
         <img src="images/youtube-logo.png" style="width: 60px; float: left; margin: 10px; opacity: 0.7;" />
         <div class="menu">
             <a href="#">Home</a>
             <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <a href="#">Support</a>
+            <a href="#">Sign In</a>
         </div>
-     </div>
+    </div>
 
 
-    <!-- Centered Div -->
-    <div class="centered-div">
+    <div class="scrollable-div">
         <div class="titleContainer">
             <img src="images/awdisea-icon-4-rounded.png" style="width: 130px; margin-right: 20px; position: relative; left: -60px" </div>
             <div>
                 <div style="color: #ffffff; padding-bottom: 5px;">Awdisea's</div>
-                <h1 style="font-size: 1.5rem; color: #ffffff">YouTube Video Performance Predictor</h1>
+                <h1 style="font-size: 1.5rem; color: #fad77c">YouTube Video Performance Predictor</h1>
                 <p style="color: #7de6fb; font-size: 1rem; text-align: center;">Predict how many views your video will get before creating it.</p>
             </div>
         </div>
         <p>Awdisea is an AI powered tool that can predict how many views a video will most likely get within a week even before the video is created. At the very minimum, it
             can predict the number of views solely on the video’s title and thumbnail, giving the least accurate prediction, or it can achieve a much higher accuracy when
             additional data is used such as the number of subscribers, total channel views, number of videos uploaded and many other parameters.</p>
-        <p>Awdisea provides 4 different levels of accuracy prediction with the lowest level being the least accurate and the top level being the most accurate. Each level depends
-            on more data.</p>
+        <p>Awdisea provides 3 different levels of accuracy prediction with the lowest level being the least accurate and the top level being the most accurate. Each level depends
+            on more data that the AI model gets trained with.</p>
         <p>Publishing a video and hoping it will be successful is just rolling the dice. Use Awdisea to increase your chances of creating a successful video.</p>
+        <p>Before you use this tool, it is important that you understand how much of the YouTube algorithm actually works. You will be better prepared to handle the results of this
+            tool, make adjustments to your thumbnail, title and other parameters that you are in control of. <a href="https://google.com">Click here</a> to read about how the
+            YouTube algorithm works and how Awdisea's AI is able to improve your chances of having a successful video.</p>
 
+        <div class="table">
+            <div class="cell title">LEVEL 1</div>
+            <div class="cell title">LEVEL 2</div>
+            <div class="cell title">LEVEL 3</div>
+
+            <div class="cell middle-text">
+                Title and thumbnail tested by AI and reviewed by humans.
+            </div>
+            <div class="cell middle-text">
+                Same as Level 1 with many more parmeters to increase accuracy.
+            </div>
+            <div class="cell middle-text">
+                Same as Level 2 with humans reviewing up to one minute of video.
+            </div>
+
+            <div class="cell button-container">
+                <button class="button">Try Level 1</button>
+            </div>
+            <div class="cell button-container">
+                <button class="button">Try Level 2</button>
+            </div>
+            <div class="cell button-container">
+                <button class="button">Try Level 3</button>
+            </div>
+        </div>
 </body>
 
 </html>
