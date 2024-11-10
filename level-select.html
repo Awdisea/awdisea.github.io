@@ -7,33 +7,6 @@
     <meta name="description" content="Predict how many views your video will get before creating it.">
     <title>How Awdisea predicts video views in advance</title>
     <link rel="stylesheet" href="styles.css">
-
-    <style>
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .row {
-            display: flex;
-        }
-
-        .cell {
-            padding-right: 10px;
-        }
-
-        .cell:first-child {
-            width: 75px;
-        }
-
-        .cell:nth-child(2) {
-            flex-grow: 1;
-        }
-
-        .cell:last-child {
-            width: 30px;
-        }
-    </style>
 </head>
 
 <body>
@@ -48,20 +21,20 @@
     </div>
 
     <div class="scrollableFrorm"">
-
         <div class=" scrollable-div formContainer">
         <div id="channelPane" style="width: 100%;">
             <div>Verify your channel</div>
             <p>
                 Awdisea only lets you use its service for channels you own. You need to verify the channel
                 that you own. Any YouTube data that you provide to Awdisea such as thumbnails and titles will only apply to your channel.
-                If you've already verified your channel, just click the test level that you want to test out your video.
+                If you've already verified your channel, just click the test level that you want to use to test out your video.
             </p>
             <p>
                 To verify that you are the channel owner, go to YouTube Studio on the channel that you want to verify. Under the
                 Customization tab you will find a field called Channel URL. Copy the URL and paste it below. A URL will be created
                 below it. Copy this URL. In YouTube Studio, create a link under Customization. Give the link the title "Awdisea"
-                and then paste the newly created URL that points to Awdisea.
+                and then paste the newly created URL that points to Awdisea. This link must always be present whenever you use
+                this service.
             </p>
 
             <div style="display: table; margin-right: 20px;">
@@ -72,17 +45,17 @@
                     <div style="display: table-cell; width: 100%;">
                         <input id="inputField" type="text" maxlength="150"
                             style="width: 100%; text-align: start; font-size: 1.02rem; background-color: #303030; border: 1px solid #898989; padding: 5px; margin-left: 0px; margin-right: 10px; color: #56ffdc"">
-                    </div>
-                    <div style=" display: table-cell; width: 30px;">
+                                </div>
+                                <div style=" display: table-cell; width: 30px;">
                         <img id="btnPaste" src="images/paste.png" style="width: 30px; margin-left: 10px; position: relative; top: 8px; cursor: pointer;" />
                     </div>
                 </div>
                 <div style="display: table-row;">
-                    <div style="display: table-cell; width: 100px;">
+                    <div style="display: table-cell; width: 100px; vertical-align: middle;">
                         <label style="white-space: nowrap; margin-right: 10px; font-size: 1.1rem; color: #56ffdc">Awdisea URL:</label>
                     </div>
                     <div style="display: table-cell; width: 100%; word-break: break-all; color: #cacaca; font-size: 1.2rem;">
-                        <div id="awdiseaUrl" style="font-size: .97rem; text-align: start;"></div>
+                        <div id="awdiseaUrl" style="font-size: .97rem; text-align: start; border: 1px solid #898989; height: 30px; padding: 5px;"></div>
                     </div>
                     <div style="display: table-cell; width: 30px; vertical-align: middle; position: relative; left: 5px;">
                         <img id="btnCopy" src="images/copy.png" style="width: 30px; cursor: pointer;" />
@@ -90,16 +63,58 @@
                 </div>
             </div>
         </div>
-        <button onclick="toggleDivs()">Show Div 2</button>
+
+
+
+        <div class="table">
+            <div class="cell title">LEVEL 1</div>
+            <div class="cell title">LEVEL 2</div>
+            <div class="cell title">LEVEL 3</div>
+
+            <div class="cell middle-text">
+                Title and thumbnail tested by AI and reviewed by humans.
+            </div>
+            <div class="cell middle-text">
+                Same as Level 1 with many more parmeters to increase accuracy.
+            </div>
+            <div class="cell middle-text">
+                Same as Level 2 with humans reviewing up to one minute of video.
+            </div>
+
+            <div class="cell button-container">
+                <button class="formButton" id="btnLevel1Form">Try Level 1</button>
+            </div>
+            <div class="cell button-container">
+                <button class="formButton btnSendEmail">Try Level 2</button>
+            </div>
+            <div class="cell button-container">
+                <button class="formButton btnSendEmail">Try Level 3</button>
+            </div>
+        </div>
+
+        <!-- The popup dialog -->
+        <div id="dialog" class="dialog">
+            <div class="dialog-content">
+                <!-- Close button (X) -->
+                <span class="close-btn" id="closeDialogBtn">&times;</span>
+                <p style="color: #808080; font-size: 1rem;">This feature is still under development. If you provide your e-mail address, we'll notify you when the beta is
+                    available.</p>
+                <!-- Email input field -->
+                <input type="email" id="emailInput" placeholder="Enter your email" required>
+                <!-- Submit button -->
+                <button id="submitBtn">Submit</button>
+            </div>
+        </div>
+
+
+        <!-- <button onclick="toggleDivs()">Show Div 2</button> -->
     </div>
+
     <div id="formPane" class="hidden" style="width: 100%;">
         <span class="formTitle">LEVEL 1</span>
         <iframe data-tally-src="https://tally.so/embed/w4Ngxo?alignLeft=1&hideTitle=1&dynamicHeight=1" loading="lazy" width="100%" height="900" frameborder="0" marginheight="0"
             marginwidth="0" title="LEVEL 1"></iframe>
         <script>var d = document, w = "https://tally.so/widgets/embed.js", v = function () { "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc })) }; if ("undefined" != typeof Tally) v(); else if (d.querySelector('script[src="' + w + '"]') == null) { var s = d.createElement("script"); s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s); }</script>
-    </div>
-
-    </div>
     </div>
 
     <script>
@@ -155,6 +170,54 @@
                     console.error('Failed to read clipboard contents: ', err);
                 });
         });
+
+        // Selecting elements
+        const btnSendEmail = document.querySelectorAll('.btnSendEmail');
+        const closeDialogBtn = document.getElementById('closeDialogBtn');
+        const dialog = document.getElementById('dialog');
+        const submitBtn = document.getElementById('submitBtn');
+        const emailInput = document.getElementById('emailInput');
+
+        // Function to open the dialog
+        btnSendEmail.forEach(button => {
+            button.addEventListener('click', () => {
+                dialog.style.display = 'flex';
+            });
+        });
+
+        // Function to close the dialog
+        closeDialogBtn.addEventListener('click', () => {
+            dialog.style.display = 'none';
+        });
+
+        // Function to submit email (placeholder for API call)
+        submitBtn.addEventListener('click', () => {
+            const email = emailInput.value;
+
+            if (email) {
+                console.log('Email submitted:', email);
+                // Placeholder for API call
+                // fetch('https://api.example.com/submit-email', {
+                //     method: 'POST',
+                //     headers: {
+                //         'Content-Type': 'application/json',
+                //     },
+                //     body: JSON.stringify({ email }),
+                // }).then(response => {
+                //     console.log('Response:', response);
+                // });
+
+                alert('Email submitted successfully!');
+                dialog.style.display = 'none';
+                emailInput.value = ''; // Clear input field
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        });
+
+        document.getElementById("btnLevel1Form").onclick = function () {
+            window.open("level1form.html", "_self");
+        };
     </script>
 
 </body>

@@ -41,95 +41,14 @@
             tool, make adjustments to your thumbnail, title and other parameters that you are in control of. <a href="https://google.com">Click here</a> to read about how the
             YouTube algorithm works and how Awdisea's AI is able to improve your chances of having a successful video.</p>
 
-        <div class="table">
-            <div class="cell title">LEVEL 1</div>
-            <div class="cell title">LEVEL 2</div>
-            <div class="cell title">LEVEL 3</div>
 
-            <div class="cell middle-text">
-                Title and thumbnail tested by AI and reviewed by humans.
-            </div>
-            <div class="cell middle-text">
-                Same as Level 1 with many more parmeters to increase accuracy.
-            </div>
-            <div class="cell middle-text">
-                Same as Level 2 with humans reviewing up to one minute of video.
-            </div>
-
-            <div class="cell button-container">
-                <button class="formButton" id="btnLevel1Form">Try Level 1</button>
-            </div>
-            <div class="cell button-container">
-                <button class="formButton btnSendEmail">Try Level 2</button>
-            </div>
-            <div class="cell button-container">
-                <button class="formButton btnSendEmail">Try Level 3</button>
-            </div>
+        <div class="cell button-container">
+            <button id="btnLevelSelect" class="formButton">Try it out...</button>
         </div>
-
-        <!-- The popup dialog -->
-        <div id="dialog" class="dialog">
-            <div class="dialog-content">
-                <!-- Close button (X) -->
-                <span class="close-btn" id="closeDialogBtn">&times;</span>
-                <p style="color: #808080; font-size: 1rem;">This feature is still under development. If you provide your e-mail address, we'll notify you when the beta is
-                    available.</p>
-                <!-- Email input field -->
-                <input type="email" id="emailInput" placeholder="Enter your email" required>
-                <!-- Submit button -->
-                <button id="submitBtn">Submit</button>
-            </div>
-        </div>
-
-        <script src="script.js"></script>
 
         <script>
-            // Selecting elements
-            const btnSendEmail = document.querySelectorAll('.btnSendEmail');
-            const closeDialogBtn = document.getElementById('closeDialogBtn');
-            const dialog = document.getElementById('dialog');
-            const submitBtn = document.getElementById('submitBtn');
-            const emailInput = document.getElementById('emailInput');
-
-            // Function to open the dialog
-            btnSendEmail.forEach(button => {
-                button.addEventListener('click', () => {
-                    dialog.style.display = 'flex';
-                });
-            });
-
-            // Function to close the dialog
-            closeDialogBtn.addEventListener('click', () => {
-                dialog.style.display = 'none';
-            });
-
-            // Function to submit email (placeholder for API call)
-            submitBtn.addEventListener('click', () => {
-                const email = emailInput.value;
-
-                if (email) {
-                    console.log('Email submitted:', email);
-                    // Placeholder for API call
-                    // fetch('https://api.example.com/submit-email', {
-                    //     method: 'POST',
-                    //     headers: {
-                    //         'Content-Type': 'application/json',
-                    //     },
-                    //     body: JSON.stringify({ email }),
-                    // }).then(response => {
-                    //     console.log('Response:', response);
-                    // });
-
-                    alert('Email submitted successfully!');
-                    dialog.style.display = 'none';
-                    emailInput.value = ''; // Clear input field
-                } else {
-                    alert('Please enter a valid email address.');
-                }
-            });
-
-            document.getElementById("btnLevel1Form").onclick = function () {
-                window.open("level1form.html", "_self");
+            document.getElementById("btnLevelSelect").onclick = function () {
+                window.open("level-select.html", "_self");
             };
         </script>
     </div>
