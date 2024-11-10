@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Generate ID</title>
+    <style>
+        label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="inputField">Enter Text:</label>
+    <input type="text" id="inputField" maxlength="75">
+    <button id="generateButton" disabled>Generate ID</button>
+
+    <script>
+        const inputField = document.getElementById('inputField');
+        const generateButton = document.getElementById('generateButton');
+
+        inputField.addEventListener('input', () => {
+            generateButton.disabled = inputField.value.trim() === '';
+        });
+
+        async function fetchHTML(url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                const htmlContent = await response.text();
+                return htmlContent;
+            } catch (error) {
+                console.error('Error fetching HTML:', error);
+                // Display an error message to the user
+                const errorMessage = document.createElement('p');
+                errorMessage.textContent = `An error occurred while fetching the page: ${error.message}`;
+                document.body.appendChild(errorMessage);
+            }
+        }
+
+        // Example usage:
+        const url = 'https://www.youtube.com/@awdisea';
+        fetchHTML(url)
+            .then(html => {
+                // Process the HTML content here, e.g., display it in a div:
+                const contentDiv = document.getElementById('content');
+                contentDiv.innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+
+
+    </script>
+</body>
+
+</html>

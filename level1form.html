@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Predict how many views your video will get before creating it.">
+    <title>How Awdisea predicts video views in advance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div style=" width: 100%;">
+        <img src="images/youtube-logo.png" style="width: 60px; float: left; margin: 10px; opacity: 0.7;" />
+        <div class="menu">
+            <a href="index.html" target="_parent">Home</a>
+            <a href="about.html" target="_parent">About</a>
+            <a href="https://github.com/Awdisea/awdisea.github.io/discussions/1" target="_blank">Support</a>
+        </div>
+    </div>
+
+    <div class="scrollableFrorm"">
+
+        <div class=" scrollable-div formContainer">
+        <div id="channelPane" style="width: 100%;">
+            <div>Verify your channel</div>
+            <p>
+                Awdisea only lets you use its service for channels you own. You need to verify the channel
+                that you own. The thumbnails and titles you provide Awdisea will only apply to your channel.
+                If you've already verified your channel, you can just click on next.
+            </p>
+            <p>
+                To verify that you are the channel owner, enter your channel's handle. For example, you're
+                channel handle would look something like "YouTube/@MrBeast". After entering your channel
+                handle, click on the Create ID button. This will create a unique ID for your channel.
+                Copy the text and ID and paste it into your channel's description. The description is found
+                in YouTube Studio under the Customization tab. This will appear to anyone viewing your channel,
+                so you might want to put it last in your description.
+            </p>
+            <div>
+                <label for="inputField" style="margin-right: 10px; font-size: 1.3rem; color: #56ffdc">YouTube/@</label>
+                <input id="inputField" type="text" maxlength="75"
+                    style="font-size: 1.3rem; background-color: #303030; border: 1px solid #898989; padding: 5px; min-width: 250px; margin-left: 0px; margin-right: 10px; color: #56ffdc"">
+                <button id="generateButton" disabled
+                    style="font-size: 1.3rem; padding: 5px 10px 5px 10px; border-radius: 5px; background-color: #3aa79e; color: #fffefe; cursor: pointer;">Create
+                ID</button>
+            </div>
+            <button onclick="toggleDivs()">Show Div 2</button>
+        </div>
+        <div id="formPane" class="hidden" style="width: 100%;">
+            <span class="formTitle">LEVEL 1</span>
+            <iframe data-tally-src="https://tally.so/embed/w4Ngxo?alignLeft=1&hideTitle=1&dynamicHeight=1" loading="lazy" width="100%" height="900" frameborder="0" marginheight="0"
+                marginwidth="0" title="LEVEL 1"></iframe>
+            <script>var d = document, w = "https://tally.so/widgets/embed.js", v = function () { "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc })) }; if ("undefined" != typeof Tally) v(); else if (d.querySelector('script[src="' + w + '"]') == null) { var s = d.createElement("script"); s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s); }</script>
+        </div>
+
+    </div>
+    </div>
+
+    <script>
+        function toggleDivs() {
+            const channelPane = document.getElementById("channelPane");
+            const formPane = document.getElementById("formPane");
+
+            if (channelPane.style.display === "none") {
+                channelPane.style.display = "block";
+                formPane.style.display = "none";
+            } else {
+                channelPane.style.display = "none";
+                formPane.style.display = "block";
+            }
+        }
+
+        const inputField = document.getElementById('inputField');
+        const generateButton = document.getElementById('generateButton');
+
+        inputField.addEventListener('input', () => {
+            generateButton.disabled = inputField.value.trim() === '';
+        });
+    </script>
+
+</body>
+
+</html>
