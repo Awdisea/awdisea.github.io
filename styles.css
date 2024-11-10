@@ -41,7 +41,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 0px 20px 20px;
 }
 
 .scrollable-div {
@@ -49,7 +49,7 @@ a {
     background: rgb(0 0 0 / 66%);
     margin-top: 20px;
     width: calc(100% - 200px);
-    height: calc(100vh - 100px);
+    /* height: calc(100vh - 100px); */
     max-width: 900px;
     text-align: center;
     color: #333;
