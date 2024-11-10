@@ -7,6 +7,33 @@
     <meta name="description" content="Predict how many views your video will get before creating it.">
     <title>How Awdisea predicts video views in advance</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .cell {
+            padding-right: 10px;
+        }
+
+        .cell:first-child {
+            width: 75px;
+        }
+
+        .cell:nth-child(2) {
+            flex-grow: 1;
+        }
+
+        .cell:last-child {
+            width: 30px;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,33 +54,50 @@
             <div>Verify your channel</div>
             <p>
                 Awdisea only lets you use its service for channels you own. You need to verify the channel
-                that you own. The thumbnails and titles you provide Awdisea will only apply to your channel.
-                If you've already verified your channel, you can just click on next.
+                that you own. Any YouTube data that you provide to Awdisea such as thumbnails and titles will only apply to your channel.
+                If you've already verified your channel, just click the test level that you want to test out your video.
             </p>
             <p>
-                To verify that you are the channel owner, enter your channel's handle. For example, you're
-                channel handle would look something like "YouTube/@MrBeast". After entering your channel
-                handle, click on the Create ID button. This will create a unique ID for your channel.
-                Copy the text and ID and paste it into your channel's description. The description is found
-                in YouTube Studio under the Customization tab. This will appear to anyone viewing your channel,
-                so you might want to put it last in your description.
+                To verify that you are the channel owner, go to YouTube Studio on the channel that you want to verify. Under the
+                Customization tab you will find a field called Channel URL. Copy the URL and paste it below. A URL will be created
+                below it. Copy this URL. In YouTube Studio, create a link under Customization. Give the link the title "Awdisea"
+                and then paste the newly created URL that points to Awdisea.
             </p>
-            <div>
-                <label for="inputField" style="margin-right: 10px; font-size: 1.3rem; color: #56ffdc">YouTube/@</label>
-                <input id="inputField" type="text" maxlength="75"
-                    style="font-size: 1.3rem; background-color: #303030; border: 1px solid #898989; padding: 5px; min-width: 250px; margin-left: 0px; margin-right: 10px; color: #56ffdc"">
-                <button id="generateButton" disabled
-                    style="font-size: 1.3rem; padding: 5px 10px 5px 10px; border-radius: 5px; background-color: #3aa79e; color: #fffefe; cursor: pointer;">Create
-                ID</button>
+
+            <div style="display: table; margin-right: 20px;">
+                <div style="display: table-row;">
+                    <div style="display: table-cell; width: 100px; padding-bottom: 20px;">
+                        <label for="inputField" style="margin-right: 10px; font-size: 1.1rem; color: #56ffdc; white-space: nowrap;">Channel URL:</label>
+                    </div>
+                    <div style="display: table-cell; width: 100%;">
+                        <input id="inputField" type="text" maxlength="150"
+                            style="width: 100%; text-align: start; font-size: 1.02rem; background-color: #303030; border: 1px solid #898989; padding: 5px; margin-left: 0px; margin-right: 10px; color: #56ffdc"">
+                    </div>
+                    <div style=" display: table-cell; width: 30px;">
+                        <img id="btnPaste" src="images/paste.png" style="width: 30px; margin-left: 10px; position: relative; top: 8px; cursor: pointer;" />
+                    </div>
+                </div>
+                <div style="display: table-row;">
+                    <div style="display: table-cell; width: 100px;">
+                        <label style="white-space: nowrap; margin-right: 10px; font-size: 1.1rem; color: #56ffdc">Awdisea URL:</label>
+                    </div>
+                    <div style="display: table-cell; width: 100%; word-break: break-all; color: #cacaca; font-size: 1.2rem;">
+                        <div id="awdiseaUrl" style="font-size: .97rem; text-align: start;"></div>
+                    </div>
+                    <div style="display: table-cell; width: 30px; vertical-align: middle; position: relative; left: 5px;">
+                        <img id="btnCopy" src="images/copy.png" style="width: 30px; cursor: pointer;" />
+                    </div>
+                </div>
             </div>
-            <button onclick="toggleDivs()">Show Div 2</button>
         </div>
-        <div id="formPane" class="hidden" style="width: 100%;">
-            <span class="formTitle">LEVEL 1</span>
-            <iframe data-tally-src="https://tally.so/embed/w4Ngxo?alignLeft=1&hideTitle=1&dynamicHeight=1" loading="lazy" width="100%" height="900" frameborder="0" marginheight="0"
-                marginwidth="0" title="LEVEL 1"></iframe>
-            <script>var d = document, w = "https://tally.so/widgets/embed.js", v = function () { "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc })) }; if ("undefined" != typeof Tally) v(); else if (d.querySelector('script[src="' + w + '"]') == null) { var s = d.createElement("script"); s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s); }</script>
-        </div>
+        <button onclick="toggleDivs()">Show Div 2</button>
+    </div>
+    <div id="formPane" class="hidden" style="width: 100%;">
+        <span class="formTitle">LEVEL 1</span>
+        <iframe data-tally-src="https://tally.so/embed/w4Ngxo?alignLeft=1&hideTitle=1&dynamicHeight=1" loading="lazy" width="100%" height="900" frameborder="0" marginheight="0"
+            marginwidth="0" title="LEVEL 1"></iframe>
+        <script>var d = document, w = "https://tally.so/widgets/embed.js", v = function () { "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc })) }; if ("undefined" != typeof Tally) v(); else if (d.querySelector('script[src="' + w + '"]') == null) { var s = d.createElement("script"); s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s); }</script>
+    </div>
 
     </div>
     </div>
@@ -72,11 +116,44 @@
             }
         }
 
+        function replaceDomain(url) {
+            return url.replace("youtube.com", "awdisea.com");
+        }
+
         const inputField = document.getElementById('inputField');
-        const generateButton = document.getElementById('generateButton');
+        const btnCopy = document.getElementById('btnCopy');
+        const btnPaste = document.getElementById('btnPaste');
+        const awdiseaUrl = document.getElementById('awdiseaUrl');
+
+        inputField.addEventListener('paste', (event) => {
+            const pastedText = event.clipboardData.getData('text/plain');
+            awdiseaUrl.textContent = replaceDomain(pastedText);
+        });
 
         inputField.addEventListener('input', () => {
-            generateButton.disabled = inputField.value.trim() === '';
+            awdiseaUrl.textContent = replaceDomain(inputField.value);
+        });
+
+        btnCopy.addEventListener('click', () => {
+            navigator.clipboard.writeText(awdiseaUrl.textContent)
+                .then(() => {
+                    alert('URL copied to clipboard!');
+                })
+                .catch(err => {
+                    console.error('Failed to copy text: ', err);
+                    alert('Failed to copy text. Please try again.');
+                });
+        });
+
+        btnPaste.addEventListener('click', () => {
+            navigator.clipboard.readText()
+                .then(text => {
+                    inputField.value = text;
+                    awdiseaUrl.textContent = replaceDomain(text);
+                })
+                .catch(err => {
+                    console.error('Failed to read clipboard contents: ', err);
+                });
         });
     </script>
 
