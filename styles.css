@@ -21,7 +21,7 @@ body {
 }
 
 p {
-    color: #d4d1d1;
+    color: #a2c1c0;
     text-align: left;
     font-size: 1.2rem;
     margin-bottom: 20px;
@@ -30,6 +30,17 @@ p {
 a {
     font-size: 1.2rem;
     color: #a5d5de;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+    text-align: start;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #c5f6ff;
 }
 
 .title2 {
@@ -45,11 +56,11 @@ a {
 }
 
 .scrollable-div {
-    padding: 40px 100px 40px 100px;
+    padding: 30px 100px 40px 100px;
     background: rgb(0 0 0 / 66%);
     margin-top: 20px;
     width: calc(100% - 200px);
-    /* height: calc(100vh - 100px); */
+    height: calc(100vh - 100px);
     max-width: 900px;
     text-align: center;
     color: #333;
@@ -113,8 +124,9 @@ a {
 }
 
 .title {
-    background-color: #a5d5de;
+    background-color: #4f8892;
     font-weight: bold;
+    color: #c5f6ff;
 }
 
 .middle-text {
@@ -139,6 +151,7 @@ a {
 .formButton {
     padding: 10px 20px;
     cursor: pointer;
+    border: none;
     border-radius: 7px;
     background-color: #5e96a0;
     color: white;
@@ -227,4 +240,30 @@ a {
 
 label {
     margin-right: 10px;
+}
+
+.levelColumn {
+    display: table-cell;
+    padding: 10px 10px 0px 10px;
+}
+
+.levelColumnInner {
+    border: 1px solid #4f8892;
+    border-radius: 5px;
+    min-width: 220px;
+}
+
+.levelContent {
+    padding: 10px 10px 20px 10px;
+    background-color: #4f889352;
+    min-height: 350px;
+}
+.levelContentFeatures {
+    padding: 10px 10px 20px 10px;
+    min-height: 280px;
+}
+
+.premiumBg {
+    padding: 3px 5px 3px 5px;
+    background-color: #4f8893;
 }

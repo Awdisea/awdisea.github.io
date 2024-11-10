@@ -23,7 +23,6 @@
     <div class="scrollableFrorm"">
         <div class=" scrollable-div formContainer">
         <div id="channelPane" style="width: 100%;">
-            <div>Verify your channel</div>
             <p>
                 Awdisea only lets you use its service for channels you own. You need to verify the channel
                 that you own. Any YouTube data that you provide to Awdisea such as thumbnails and titles will only apply to your channel.
@@ -40,7 +39,7 @@
             <div style="display: table; margin-right: 20px;">
                 <div style="display: table-row;">
                     <div style="display: table-cell; width: 100px; padding-bottom: 20px;">
-                        <label for="inputField" style="margin-right: 10px; font-size: 1.1rem; color: #56ffdc; white-space: nowrap;">Channel URL:</label>
+                        <label for="inputField" style="margin-right: 10px; font-size: 1.1rem; color: #84e2d9; white-space: nowrap;">Channel URL:</label>
                     </div>
                     <div style="display: table-cell; width: 100%;">
                         <input id="inputField" type="text" maxlength="150"
@@ -52,7 +51,7 @@
                 </div>
                 <div style="display: table-row;">
                     <div style="display: table-cell; width: 100px; vertical-align: middle;">
-                        <label style="white-space: nowrap; margin-right: 10px; font-size: 1.1rem; color: #56ffdc">Awdisea URL:</label>
+                        <label style="white-space: nowrap; margin-right: 10px; font-size: 1.1rem; color: #84e2d9">Awdisea URL:</label>
                     </div>
                     <div style="display: table-cell; width: 100%; word-break: break-all; color: #cacaca; font-size: 1.2rem;">
                         <div id="awdiseaUrl" style="font-size: .97rem; text-align: start; border: 1px solid #898989; height: 30px; padding: 5px;"></div>
@@ -64,9 +63,69 @@
             </div>
         </div>
 
+        <div style="display: table; width: 100%; margin-top: 20px;">
+            <div style="display: table-row;">
+                <div class="levelColumn">
+                    <div class="levelColumnInner">
+                        <div class="cell title">LEVEL 1</div>
+                        <div class="levelContent">
+                            <div class="levelContentFeatures">
+                                <ul>
+                                    <li>1 thumbnail + title</li>
+                                    <li>Tested by AI</li>
+                                    <li>Reviewed by humans</li>
+                                    <li>65% accuracy</li>
+                                    <li>1 free submissions / day</li>
+                                </ul>
+                            </div>
+                            <div><button class="formButton" id="btnLevel1Form">Try Level 1</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="levelColumn">
+                    <div class="levelColumnInner">
+                        <div class="cell title">LEVEL 2</div>
+                        <div class="levelContent">
+                            <div class="levelContentFeatures">
+                                <ul>
+                                    <li>3 thumbnails + 3 titles</li>
+                                    <li>More parameters</li>
+                                    <li>Tested by AI</li>
+                                    <li>Reviewed by humans</li>
+                                    <li>73% accuracy</li>
+                                    <li>1 submission / day</li>
+                                    <li><span class="premiumBg">Premium</span></li>
+                                </ul>
+                            </div>
+                            <div><button class="formButton" id="btnLevel1Form">Try Level 2</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="levelColumn">
+                    <div class="levelColumnInner">
+                        <div class="cell title">LEVEL 3</div>
+                        <div class="levelContent">
+                            <div class="levelContentFeatures">
+                                <ul>
+                                    <li>3 thumbnails + 3 titles</li>
+                                    <li>More parameters</li>
+                                    <li>1 minute video review by humans</li>
+                                    <li>Tested by AI</li>
+                                    <li>Reviewed by humans</li>
+                                    <li>84% accuracy</li>
+                                    <li>1 submission / day</li>
+                                    <li><span class="premiumBg">Premium</span></li>
+                                </ul>
+                            </div>
+                            <div><button class="formButton" id="btnLevel1Form">Try Level 3</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+        </div>
 
-        <div class="table">
+        <!--         <div class="table">
             <div class="cell title">LEVEL 1</div>
             <div class="cell title">LEVEL 2</div>
             <div class="cell title">LEVEL 3</div>
@@ -90,7 +149,7 @@
             <div class="cell button-container">
                 <button class="formButton btnSendEmail">Try Level 3</button>
             </div>
-        </div>
+        </div> -->
 
         <!-- The popup dialog -->
         <div id="dialog" class="dialog">
