@@ -256,14 +256,35 @@ label {
 .levelContent {
     padding: 10px 10px 20px 10px;
     background-color: #4f889352;
-    min-height: 350px;
+    min-height: 375px;
 }
 .levelContentFeatures {
     padding: 10px 10px 20px 10px;
-    min-height: 280px;
+    min-height: 300px;
 }
 
 .premiumBg {
     padding: 3px 5px 3px 5px;
     background-color: #4f8893;
+}
+
+.image-wrapper {
+    float: left;
+    margin: 0 20px 20px 0;
+    max-width: 300px;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+p {
+    text-align: justify;
+}
+
+.clear {
+    clear: both;
 }
