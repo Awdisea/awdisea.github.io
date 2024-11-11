@@ -12,7 +12,6 @@
 <body>
 
     <div style=" width: 100%;">
-        <img src="images/youtube-logo.png" style="width: 60px; float: left; margin: 10px; opacity: 0.7;" />
         <div class="menu">
             <a href="index.html" target="_parent">Home</a>
             <a href="about.html" target="_parent">About</a>
@@ -75,10 +74,10 @@
                                     <li>Tested by AI</li>
                                     <li>Reviewed by humans</li>
                                     <li>65% accuracy</li>
-                                    <li>1 free submissions / day</li>
+                                    <li>Minimum of 1 free submission / day</li>
                                 </ul>
                             </div>
-                            <div><button class="formButton" id="btnLevel1Form">Try Level 1</button></div>
+                            <div><button class="formButton" id="btnLevel1Form">Use Level 1</button></div>
                         </div>
                     </div>
                 </div>
@@ -93,11 +92,11 @@
                                     <li>Tested by AI</li>
                                     <li>Reviewed by humans</li>
                                     <li>73% accuracy</li>
-                                    <li>1 submission / day</li>
-                                    <li><span class="premiumBg">Premium</span></li>
+                                    <li>Minimum of 2 submissions / day</li>
+                                    <li style="padding-top: 5px;"><span class="premiumBg">Premium</span></li>
                                 </ul>
                             </div>
-                            <div><button class="formButton" id="btnLevel1Form">Try Level 2</button></div>
+                            <div><button class="formButton" id="btnLevel1Form">Use Level 2</button></div>
                         </div>
                     </div>
                 </div>
@@ -113,43 +112,17 @@
                                     <li>Tested by AI</li>
                                     <li>Reviewed by humans</li>
                                     <li>84% accuracy</li>
-                                    <li>1 submission / day</li>
-                                    <li><span class="premiumBg">Premium</span></li>
+                                    <li>Minimum of 3 submissions / day</li>
+                                    <li style="padding-top: 5px;"><span class="premiumBg">Premium</span></li>
                                 </ul>
                             </div>
-                            <div><button class="formButton" id="btnLevel1Form">Try Level 3</button></div>
+                            <div><button class="formButton" id="btnLevel1Form">Use Level 3</button></div>
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
-
-        <!--         <div class="table">
-            <div class="cell title">LEVEL 1</div>
-            <div class="cell title">LEVEL 2</div>
-            <div class="cell title">LEVEL 3</div>
-
-            <div class="cell middle-text">
-                Title and thumbnail tested by AI and reviewed by humans.
-            </div>
-            <div class="cell middle-text">
-                Same as Level 1 with many more parmeters to increase accuracy.
-            </div>
-            <div class="cell middle-text">
-                Same as Level 2 with humans reviewing up to one minute of video.
-            </div>
-
-            <div class="cell button-container">
-                <button class="formButton" id="btnLevel1Form">Try Level 1</button>
-            </div>
-            <div class="cell button-container">
-                <button class="formButton btnSendEmail">Try Level 2</button>
-            </div>
-            <div class="cell button-container">
-                <button class="formButton btnSendEmail">Try Level 3</button>
-            </div>
-        </div> -->
 
         <!-- The popup dialog -->
         <div id="dialog" class="dialog">
@@ -164,9 +137,6 @@
                 <button id="submitBtn">Submit</button>
             </div>
         </div>
-
-
-        <!-- <button onclick="toggleDivs()">Show Div 2</button> -->
     </div>
 
     <div id="formPane" class="hidden" style="width: 100%;">
@@ -177,18 +147,6 @@
     </div>
 
     <script>
-        function toggleDivs() {
-            const channelPane = document.getElementById("channelPane");
-            const formPane = document.getElementById("formPane");
-
-            if (channelPane.style.display === "none") {
-                channelPane.style.display = "block";
-                formPane.style.display = "none";
-            } else {
-                channelPane.style.display = "none";
-                formPane.style.display = "block";
-            }
-        }
 
         function replaceDomain(url) {
             return url.replace("youtube.com", "awdisea.com");
