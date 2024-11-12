@@ -296,7 +296,16 @@ label {
     border-top: 1px solid #8dfee1;
 }
 
-.image-container {
+.image-container-left {
+    float: left;
+    /* Floats the image container to the right */
+    width: 200px;
+    margin: 0 20px 10px 0;
+    /* Margin around the container */
+    text-align: center;
+}
+
+.image-container-right {
     float: right;
     /* Floats the image container to the right */
     width: 200px;
