@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Predict how many views your video will get before creating it.">
+    <meta name="description" content="Awdisea - Predict how many views your video will get before creating it.">
     <title>Predict YouTube video views in advance</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -29,26 +29,115 @@
 
         <p>Awdisea is an AI powered tool that can predict how many views a video will most likely get within a week, even before the video is created. At the very minimum, it
             can predict the number of views solely on the video’s title and thumbnail, giving the least accurate prediction, or it can achieve a much higher accuracy when
-            additional data is used such as the number of subscribers, total channel views, number of videos uploaded and many other parameters.</p>
-        <p>Awdisea provides 3 different levels of accuracy prediction with the lowest level being the least accurate and the top level being the most accurate. Each level
-            depends
-            on more data that the AI model gets trained with.</p>
+            you provide additional data. Behind the scenes, Awdisea will also access access a lot of other data in order to increase the accuracy.
+        </p>
         <p>Walt Disney faced the problem of investing a lot of money in an animated film only to watch it bomb. He solved the problem by
             creating rough mockups of his films before expensive animation was done. Only when the mockup was well received was the animation green lit.
-            Awdisea helps YouTubers take the same approach by testing their video ideas before beginning any actual productioin.
+            Awdisea helps YouTubers take the same approach by testing their video ideas before beginning any actual production.
         </p>
         <p>Publishing a video and hoping it will be successful is just rolling the dice. Use Awdisea to increase your chances of creating a successful video.</p>
 
         <div class="clear"></div>
 
-        <div style="width: 100%; text-align: center;">
-            <button id="btnLevelSelect" class="formButton">Try it out...</button>
+        <h2 class="sectionHeader">REQUIREMENTS</h2>
+
+        <p>
+            This is currently a free service but you must meet the requirements to use it. You must be the owner of
+            a YouTube channel, have at least 500 subscribers and have posted at least 3 videos in the past 3 months (shorts are not allowed).
+        </p>
+        <p>
+            To verify that you are the channel owner, go to YouTube Studio on the channel that you want to verify. Under the
+            Customization tab you will find a field called Channel URL. Copy the URL and paste it below. A URL will be created
+            below it. Copy this URL. In YouTube Studio, create a link under Customization. Give the link the title "Awdisea"
+            and then paste the newly created URL that points to Awdisea. This link must always be present whenever you use
+            this service. If you've already verified your channel, you can skip this step.
+        </p>
+
+        <div style="display: table; margin-right: 20px; margin-bottom: 60px;">
+            <div style="display: table-row;">
+                <div style="display: table-cell; width: 100px; padding-bottom: 20px;">
+                    <label for="inputField" style="margin-right: 10px; font-size: 1.1rem; color: #84e2d9; white-space: nowrap;">Channel URL:</label>
+                </div>
+                <div style="display: table-cell; width: 100%;">
+                    <input id="inputField" type="text" maxlength="150"
+                        style="width: 100%; text-align: start; font-size: 1.02rem; background-color: #303030; border: 1px solid #898989; padding: 5px; margin-left: 0px; margin-right: 10px; color: #56ffdc"">
+                                        </div>
+                                        <div style=" display: table-cell; width: 30px;">
+                    <img id="btnPaste" src="images/paste.png" style="width: 30px; margin-left: 10px; position: relative; top: 8px; cursor: pointer;" />
+                </div>
+            </div>
+            <div style="display: table-row;">
+                <div style="display: table-cell; width: 100px; vertical-align: middle;">
+                    <label style="white-space: nowrap; margin-right: 10px; font-size: 1.1rem; color: #84e2d9">Awdisea URL:</label>
+                </div>
+                <div style="display: table-cell; width: 100%; word-break: break-all; color: #cacaca; font-size: 1.2rem;">
+                    <div id="awdiseaUrl" style="font-size: .97rem; text-align: start; border: 1px solid #898989; height: 30px; padding: 5px;"></div>
+                </div>
+                <div style="display: table-cell; width: 30px; vertical-align: middle; position: relative; left: 5px;">
+                    <img id="btnCopy" src="images/copy.png" style="width: 30px; cursor: pointer;" />
+                </div>
+            </div>
         </div>
 
+        <h2 class="sectionHeader">VIDEO DATA</h2>
+
+        <p>
+            Each YouTuber can only make one submission a day. The more information you provide, the more accurate the prediction will be.
+            It can take up to 24 hours for an assessment to be made. A report will be sent to the email address you provide below.
+            You can define up to 3 thumbnails and 3 titles. After submitting your video data, it can take up to 24 hours for
+            it to be processed. A report will be sent to the email address you provide below. Each thumbnail and title will be given
+            a score. It is recommended that you use the thumbnail and title with the highest score. It is important that you use only
+            one of the thumbnails and titles you provide during your submission and not change either of them for the first week after you
+            publish your video, otherwise Awdisea will have no way of improving the data for future predictions.
+        </p>
+
+        <div style="width: 100%;">
+            <iframe data-tally-src="https://tally.so/embed/nGoxYo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="900"
+                frameborder="0" marginheight="0" marginwidth="0" title="LEVEL 2"></iframe>
+            <script>var d = document, w = "https://tally.so/widgets/embed.js", v = function () { "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc })) }; if ("undefined" != typeof Tally) v(); else if (d.querySelector('script[src="' + w + '"]') == null) { var s = d.createElement("script"); s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s); }</script>
+        </div>
+
+
         <script>
-            document.getElementById("btnLevelSelect").onclick = function () {
-                window.open("level-select.html", "_self");
-            };
+            function replaceDomain(url) {
+                return "https://awdisea.github.io/?cid=" + url.substring(32);
+            }
+
+            const inputField = document.getElementById('inputField');
+            const btnCopy = document.getElementById('btnCopy');
+            const btnPaste = document.getElementById('btnPaste');
+            const awdiseaUrl = document.getElementById('awdiseaUrl');
+
+            inputField.addEventListener('paste', (event) => {
+                const pastedText = event.clipboardData.getData('text/plain');
+                awdiseaUrl.textContent = replaceDomain(pastedText);
+            });
+
+            inputField.addEventListener('input', () => {
+                awdiseaUrl.textContent = replaceDomain(inputField.value);
+            });
+
+            btnCopy.addEventListener('click', () => {
+                navigator.clipboard.writeText(awdiseaUrl.textContent)
+                    .then(() => {
+                        alert('URL copied to clipboard!');
+                    })
+                    .catch(err => {
+                        console.error('Failed to copy text: ', err);
+                        alert('Failed to copy text. Please try again.');
+                    });
+            });
+
+            btnPaste.addEventListener('click', () => {
+                navigator.clipboard.readText()
+                    .then(text => {
+                        inputField.value = text;
+                        awdiseaUrl.textContent = replaceDomain(text);
+                    })
+                    .catch(err => {
+                        console.error('Failed to read clipboard contents: ', err);
+                    });
+            });
         </script>
     </div>
 </body>

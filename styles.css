@@ -22,13 +22,13 @@ body {
 
 p {
     color: #a2c1c0;
-    text-align: left;
+    text-align: justify;
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
 a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #a5d5de;
 }
 
@@ -281,10 +281,39 @@ label {
     border-radius: 8px;
 }
 
-p {
-    text-align: justify;
-}
-
 .clear {
     clear: both;
+}
+
+.sectionHeader {
+    color: #8dfee1;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: start;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #8dfee1;
+}
+
+.image-container {
+    float: right;
+    /* Floats the image container to the right */
+    width: 200px;
+    margin: 0 0 10px 20px;
+    /* Margin around the container */
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.caption {
+    font-size: 1.1rem;
+    color: #52e6ff;
+    padding-top: 5px;
 }
